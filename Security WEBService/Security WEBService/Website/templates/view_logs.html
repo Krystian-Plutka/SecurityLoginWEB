@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block title %}Logi Bezpieczeństwa{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h3 align="center"Logi bezpieczeństwa</h3>
+        <pre>{{ logs|join('') }}</pre>
+</div>
+{% endblock %}

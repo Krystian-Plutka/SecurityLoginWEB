@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% block title %}Ustawienia Kodu{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<style>
+
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 20px;
+}
+
+button {
+align-items: center;
+padding: 10px, 20px;
+}
+
+img {
+display: block;
+margin: 20px auto;
+align-items: center;
+}
+
+</style>    
+</head>    
+<br><br><h2 align="center">Generuj Kod Weryfikacyjny <i class="bi bi-shield-fill-check"></i></h2>
+<form method = "POST">
+    <button type="submit", class="btn btn-primary">Generuj Kod</button>
+</form>
+
+{% if qr_code_path %}
+<img src="{{ url_for('static', filename=qr_code_path) }}" alt="Kod QR">
+{% endif %}
+
+<br><br><br>
+<section id="guide" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center">Jak ustawić Weryfikacje:</h2>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <i class="bi bi-download" style="font-size: 2rem;"></i>
+                <br><br>
+                <p>1. Zainstaluj aplikację <cite title="Source Title">"Google Authenticator"</cite> z <cite title="Source Title">"Sklep Play"</cite> na telefonie lub innym urządzeniu wyposażonym w aparat.</p>    
+                <br>
+                <i class="bi bi-qr-code-scan" style="font-size: 2rem;"></i>
+                <br><br>
+                <p>2. Po kliknięciu w przycisk <cite title="Source Title">"Generuj Kod"</cite> zeskanuj wyświetlający się kod QR na stronie za pomocą Funkcji w telefonie <cite title="Source Title">"Skanuj kod QR"</cite> lub za pomocą aparatu w telefonie czy nowej aplikacji.</p>
+                <br>
+                <img src="{{ url_for('static', filename='images/google.png') }}" class="d-block mx-auto" width="300" alt="Google Authenticator">
+                <br><br>
+                <p>3. Podczas logowania się na stronę będziesz proszony o podanie w polu tekstowym swojego kodu wygenerowanego przez aplikację.</p>
+                <br>
+                <img src="{{ url_for('static', filename='images/google1.png') }}" class="d-block mx-auto" width="320" alt="Przykładowy kod z Google Authenticator">
+                <br>
+                <p class="text-center" style="color: rgb(156, 25, 0);">UWAGA: Kod w aplikacji generuje się nowy co 45 sekund w celu bezpieczeństwa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

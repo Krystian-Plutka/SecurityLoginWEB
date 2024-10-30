@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Forum Społeczności{% endblock %}
+
+{% block content %}
+<br><br><br><h3 align="center">Posty:</h3><br>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item">
+       {{ user.first_name }}:  {{ note.data }}
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </li>
+    {% endfor %}
+</ul>      
+<form action = "{{ url_for('auth.forum') }}" method="POST">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <div align="center"><br/>
+        <button type="submit" class="btn btn-primary">Dodaj Post na stronie</button>
+        </div>
+        </form>
+{% endblock %}

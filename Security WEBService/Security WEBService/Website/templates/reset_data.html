@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Resetowanie Hasła{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+   <br><br><h3 align="center">Resetowanie Danych:</h3>
+<form method="POST">
+   <div class="form-group">
+    <label for="email">Nowe E-mail:</label>  
+    <input type="email" class="form-control" id="email" name="email" placeholder="Wprowadz nowy E-mail">
+   </div>
+   <div class="form-group">
+    <label for="username">Nowa nazwa użytkownika:</label>
+    <input type="text" class="form-control" id="username" name="username" placeholder="Wprowadz nową nazwę użytkownika">
+   </div>
+   <div class="form-group">
+    <label for="password">Nowe Hasło:</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Wprowadz nowe hasło">
+     </div>
+   <div class="form-group">
+    <label for="confirm_password">Potwierdz nowe hasło:</label>
+    <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Potwierdz nowe hasło">
+   </div>
+   <button type="sumbit" class="btn btn-primary">Zaktualizuj Dane</button> 
+</form>    
+</div>
+{% endblock %}

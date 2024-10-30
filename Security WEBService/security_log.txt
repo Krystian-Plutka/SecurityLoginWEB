@@ -1,0 +1,4 @@
+User ID: 1, Event: Poprawne logowanie, Time: 2024-08-22 13:14:08.360533
+User ID: 1, Event: Nieprawid³owy kod weryfikacyjny, Time: 2024-08-22 13:14:08.370314
+User ID: 22, Event: Poprawne logowanie, Time: 2024-08-22 13:19:19.372377
+User ID: 5, Event: Poprawne logowanie, Time: 2024-08-28 12:35:10.731287

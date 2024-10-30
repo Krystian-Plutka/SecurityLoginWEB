@@ -1,0 +1,102 @@
+{% extends "base.html" %} {% block title %}Security LoginWEB{% endblock %}
+
+{% block content %}
+   <header class="hero-section text-center bg-primary text-white py-5">
+    <div class="container">
+        <h1>Witamy w Security LoginWEB</h1>
+        <p>Bezpieczne logowanie i zarządzanie dostępem dla Ciebie</p>
+    </div>
+    </header>
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>O nas:</h2>
+            <p class="lead">Security LoginWEB to narzędzie, które pozwala firmom a także uzytkownikom na zarządzanie dostępem do różnych plików strony oraz bezpieczeństwem użyktowników oraz prowadzić rozmowy na temat cyberbezpieczeństwa oraz różnymi atakami hakerskimi. Naszym celem jest zapewnienie najwyższego poziomu bezpieczeństwa w internecie, jednocześnie ułatwiając użytkownikom dostęp do potrzebnych zasobów.</p>
+        </div>
+        <section id="features" class="py-5 bg-light">
+            <div class="container">
+             <h2 class="text-center">Nasze funkcje:</h2>
+             <div class="row mt-4">
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-shield-lock-fill fa-3x text-primary mb-3"></i>
+                    <h3>Bezpieczne Logowanie:</h3>
+                    <p>Zawansowane Uwierzytelnianie, które chroni twoje dane przed atakiem hakerskim:</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-lock-fill fa-3x text-primary mb-3"></i>
+                    <h3>Zarządzanie Bezpieczeństwem i dostępem:</h3>
+                    <p>Intuicyjne narzędzia do zarządzania Uprawnieniami użytkowników.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-speedometer2 fa-3x text-primary mb-3"></i>
+                    <h3>Szybkość i efektywność:</h3>
+                    <p>Optymwalizowane procesy, które pozwalają na szybkie logowanie oraz bezpieczne.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-wechat fa-3x text-primary mb-3"></i>
+                    <h3>Forum:</h3>
+                    <p>Możesz z społeczeństwem związanym z cyberbezpieczeństwem wdać się w rozmowę o różnych tematach.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-arrow-clockwise fa-3x text-primary mb-3"></i>
+                    <h3>Resetuj dane:</h3>
+                    <p>Dzięki takiej funckji możesz w razie przewidzianego niebezpieczeństwa stworzyć nowe dane osobowe</p>
+               </div>
+             </div>
+            </div>
+       </section>
+       <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Opinie naszych użytkowników:</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"Security LoginWEB zmieniło sposób, w jaki zarządzamy dostępem w naszej firmie. Niezawodne i łatwe w użyciu."</p>
+                        <footer class="blockquote-footer">Grzegorz Opała, <cite title="Source Title">Szef, Firma XYZ</cite></footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"Bezpieczne i szybkie logowanie, dokładnie tego potrzebowaliśmy."</p>
+                        <footer class="blockquote-footer">Jan Nowak, <cite title="Source Title">CEO, Firma ABC</cite></footer>
+                    </blackquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"Wspaniałe narzędzia, które pozwala mi na spokojny sen, widząc że nasze dane są bezpieczne."</p>
+                        <footer class="blockquote-footer">Maria Wiśniewska, <cite title="Source Title">Manager, Firma DEF</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+       </section>
+       <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center">Skontaktuj się z nami</h2>
+            <p class="text-center">Masz pytania? Jesteśmy tutaj, aby pomóc!</p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+            <form>
+                <div class="form-group" style="align-items: center;">
+                    <label for="name">Imię i nazwisko:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Wpisz swoje imię"><br>
+                
+                    <label for="e-mail">Adres E-mail:</label><br>
+                    <input type="email" class="form-control" id="email" placeholder="Wpisz swój adres e-mail"><br>
+                
+                   <label for="message">Treść Wiadomości:</label>
+                   <textarea class="form-control" id="message" rows="3" placeholder="Wpisz Wiadomość"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Wyślij</button>
+            </form>
+           </div>     
+              <div class="col-md-6 text-center">
+                <br><br><br><h3>Dane Kontaktowe</h3>
+                <p><i class="bi bi-envelope-fill"></i>  kontakt@twojafirma.pl</p>
+                <p><i class="bi bi-telephone-fill"></i>  + 48 666 393 000</p>
+                <p><i class="bi bi-geo-alt-fill"></i>  ul.Przykładowa 12, 00-001 Olkusz</p>
+            </div>        
+        </div>
+    </div>
+</section>
+{% endblock %}
+

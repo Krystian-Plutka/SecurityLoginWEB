@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block title %}Podaj login{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <br><br><h3 align="center">Zarządzanie Rolami i Uprawnieniami:</h3>
+
+<form method="POST">
+ 
+<div class="form-group">
+    <label for="role_name">Nowa Rola:</label>
+    <input type="text" class="form-control" id="role_name" name="role_name" placeholder="Wprowadz nazwę roli">
+</div>
+
+<div class="form-group">
+    <label for="permission_name">Nowe uprawnienia:</label>
+    <input type="text" class="form-control" id="permissions_name" name="permission_name" placeholder="Wprowadz nazwę uprawnienia">
+</div>
+
+<div class="form-group">
+    <label for="user_id">Przypisz Rolę użytkownikowi:</label> 
+    <select class="form-control" id="user_id" name="user_id">
+        <option value="">Wybierz użytkownika:</option>
+        {% for user in users %}
+        <option value="{{ user.id }}">{{ user.email }}</option>
+        {% endfor %}
+    </select>
+    <select class="form-control mt-2" id="role_name" name="role_name">
+        <option value="">Wybierz rolę:</option>
+        {% for role in roles %}
+        <option value="{{ role.name }}">{{ role.name }}</option>
+        {% endfor %}
+    </select>        
+  </div>  
+  <button type="submit" class="btn btn-primary">Zapisz Zmiany</button>
+</form>
+
+<h3 class="mt-4">Lista Ról i Uprawnień Użytkowników:</h3>
+<ul class="list-group">
+   {% for user in users %}
+   <li class="list-group-item">
+       
+       <strong>{{ user.first_name }} ({{ user.email }})</strong>
+       <ul>
+           {% for role in user.roles %}
+           <li>
+             Rola: <strong>{{ role.name }}</strong>
+             <ul>
+                Uprawnienia:
+                {% for permission in role.permissions %}
+                    <li>{{ permission.name }}</li>
+                {% endfor %}
+       </ul>
+    </li>
+    {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+  </ul>
+</div>
+{% endblock %}
